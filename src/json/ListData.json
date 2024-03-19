@@ -2,14 +2,18 @@
   {
     "idx":1,
     "name":"KakaoTalk",
-    "detail":"please check My Kakao Account Info",
+    "detail":[
+      "please check My Kakao Account Info"
+    ],
     "time":"21:22",
     "count":1
   },
   {
     "idx":2,
     "name":"Contect me",
-    "detail":"please call me",
+    "detail":[
+      "please call me","dd call me","fff"
+    ],
     "time":"17:22",
     "count":1
   }

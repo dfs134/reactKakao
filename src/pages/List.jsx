@@ -12,15 +12,12 @@ import { IoMusicalNotesOutline, IoSettingsOutline } from "react-icons/io5";
 function List() {
   let [newList, listAdt] = useState(ListData);
 
-  var newArray = [...newList];
-  newArray[1].count = 3
-
   const setting = () => {
     const set = document.querySelector('.setting');
     set.classList.toggle('setting-on');
   }
   
-  const RedSum = newArray.reduce((acc, item) => acc + item.count, 0);
+  const RedSum = newList.reduce((acc, item) => acc + item.detail.length, 0);
   
 
 
@@ -46,12 +43,12 @@ function List() {
             <img src={kakao} alt="" />
             <div className='padding-RL'>
               <h5>{item.name}</h5>
-              <p>{item.detail}</p>
+              <p>{item.detail[0]}</p>
             </div>
           </SC.WrapJustStart>
           <SC.ColumnAlEnd>
             <h6>{item.time}</h6>
-            <SC.Circle>{item.count}</SC.Circle>
+            <SC.Circle>{item.detail.length}</SC.Circle>
           </SC.ColumnAlEnd>
         </SC.WrapJustBetween>
       ))}
