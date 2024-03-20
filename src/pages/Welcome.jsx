@@ -8,6 +8,7 @@ function Welcome() {
   const [emailPhone, setEmailPhone] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
   const ChangeInput = (e) => {
     const { name, value } = e.target;
     if (name === 'emailPhone') {
@@ -17,7 +18,7 @@ function Welcome() {
     }
   };
 
-   const handleLoginClick = () => {
+  const handleLoginClick = () => {
     if (!emailPhone || !password) {
       alert('아이디와 패스워드를 모두 입력해 주시오');
     } else {
